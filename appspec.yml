@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+  - source: source.txt
+    destination: /webapps
+hooks:
+  BeforeInstall:
+    - location: Scripts/BeforeInstall.sh
+  AfterInstall:
+    - location: Scripts/AfterInstall.sh
+      timeout: 180
+  ApplicationStart:
+    - location: Scripts/ApplicationStart.sh
+      timeout: 3600
+  ValidateService:
+    - location: Scripts/ValidateService.sh
+      timeout: 3600
