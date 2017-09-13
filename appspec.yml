@@ -5,13 +5,13 @@ files:
     destination: /webapps
 hooks:
   BeforeInstall:
-    - location: Scripts/BeforeInstall.sh
+    - location: scripts/BeforeInstall.sh
   AfterInstall:
-    - location: Scripts/AfterInstall.sh
+    - location: scripts/AfterInstall.sh
       timeout: 180
   ApplicationStart:
-    - location: Scripts/ApplicationStart.sh
+    - location: scripts/ApplicationStart.sh
       timeout: 3600
   ValidateService:
-    - location: Scripts/ValidateService.sh
+    - location: scripts/ValidateService.sh
       timeout: 3600
